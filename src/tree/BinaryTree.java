@@ -1,7 +1,9 @@
 package tree;
 
 public class BinaryTree {
+
 	public static void main(String[] args) {
+		
 		Node root = new Node(10);
 		root.left = new Node(20);
 		root.left.left = new Node(40);
@@ -16,8 +18,6 @@ public class BinaryTree {
 		Node.traversePreOrder(root);
 		System.out.println("\nPostOrder");// 40 70 80 50 20 60 30 10
 		Node.traversePostOrder(root);
-
 	}
-
 
 }
