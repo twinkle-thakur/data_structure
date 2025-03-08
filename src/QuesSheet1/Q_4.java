@@ -1,5 +1,7 @@
 package QuesSheet1;
 
+import java.util.Arrays;
+
 public class Q_4 {
 	public static void sort(int a[],int n) {
 		for (int i = 0; i < n; i++) {
@@ -14,6 +16,9 @@ public class Q_4 {
 			System.out.println(a[i]);
 		}
 	}
+	 
+	
+
     public static double mean(int a[],int n) {
     	int sum = 0;
 		for (int i = 0; i < a.length; i++) {
@@ -23,7 +28,9 @@ public class Q_4 {
 		return mean;
     }
     public static void median(int a[],int n) {
-    	sort(a,n);
+    	Arrays.sort(a);//directly used from collections
+    	//or
+    	sort(a,n);//from method that we have created
 		if (n % 2 != 0) {// for odd
 			System.out.println("median is = " + a[(n + 1) / 2]);
 		} else {// for even
@@ -33,7 +40,7 @@ public class Q_4 {
 	public static void main(String[] args) {
 		int n = 5;// size of array
 		int a[] = { 1, 2, 19, 28, 5 };
-	//	
+			
 	//	System.out.println("mean is =" + mean(a,n));
 	//	median(a,n);
 		sort(a,n);
