@@ -14,11 +14,14 @@ public static void evenAndOddSort(int[] a) {
 		while(left < right&&a[right]%2!=0) {
 			right--;
 		}
-		int temp=a[right];
-		a[right]=a[left];
-		a[left]=temp;
-		left++;
-		right--;
+		if(left<right) {
+			int temp=a[left];
+			a[left]=a[right];
+			a[right]=temp;
+			left++;
+			right--;	
+		}
+		
 		
 	}
 	Arrays.sort(a, 0, left); //sort includes 1 index but exclude last index

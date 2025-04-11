@@ -1,5 +1,6 @@
 package QuesSheet1;
-
+//brutforce method 
+//time complexity=O(n^2)
 public class Q_6 {
 	public static int equilibrium(int[] a1) {
 		for(int i=0;i<a1.length;i++) {
