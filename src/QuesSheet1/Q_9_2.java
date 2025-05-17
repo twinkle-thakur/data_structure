@@ -1,6 +1,7 @@
 package QuesSheet1;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Q_9_2 {
@@ -29,8 +30,16 @@ public class Q_9_2 {
 			System.out.print(arr[i]+" ");
 		}
 	}
+	public static void usingHasMap(int[] a,int p,int n) {
+		Map<Integer,Integer> map=new HashMap<>();
+		for(int num:a) {
+			map.put(num, map.getOrDefault(num, 0)+1);
+		}
+		System.out.println(map);
+	}
 	public static void main(String[] args) {
 		int[] arr= {3,4,4,8,1,2,5};
-		frequency(arr,7 , 8);
+		//frequency(arr,7 , 8);
+		usingHasMap(arr, 7, 8);
 	}
 }
