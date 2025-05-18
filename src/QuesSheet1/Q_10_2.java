@@ -21,8 +21,20 @@ public class Q_10_2 {
 		return maxDiff;
 		
 	}
+	public static int maxIndexDiff2(int[] a) {
+		int low=0,high=a.length-1,ans=0;
+		while(low<=high) {
+			if(a[low]<=a[high]) {
+				ans=Math.max(ans, high-low);
+				low++; high=a.length-1;
+			}else {
+				high--;
+			}
+		}return ans;
+	}
 	public static void main(String[] args) {
 		int[] a= {34, 8, 10, 3, 2, 80, 30, 33, 1};
 		System.out.println(maxIndexDiff(a));
+		//System.out.println(maxIndexDiff2(a));
 	}
 }
